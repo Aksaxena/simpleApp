@@ -1,10 +1,21 @@
-var app = require('express')();
-var http = require('http');
-var server = http.createServer(app);
-var io = require('socket.io')(http);
-var bodyParser = require('body-parser');
-var mysql = require('mysql');
-var port = process.env.PORT || 3000;
+var express = require('express'),
+        app = express(),
+        http = require('http'),
+        server = http.createServer(app),
+        io = require('socket.io').listen(server),
+        _ = require('underscore'),
+        moment = require('moment'),
+        request = require('request'),
+        //waterfall = require('async-waterfall'),
+        bodyParser = require('body-parser'),
+        usernames = {},
+        userIds = {},
+        clients = [],
+        users = [],
+        onlineClient = [],
+        clientInfo = {},
+        mysql = require('mysql'),
+        port = 3000;
 
 
 //add body barser to accept post requests
