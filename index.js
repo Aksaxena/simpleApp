@@ -37,6 +37,7 @@ connection.connect(function (err) {
 
 //start chat server
 server.listen(port);
+
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
