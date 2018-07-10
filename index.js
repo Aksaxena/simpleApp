@@ -1,5 +1,6 @@
 var app = require('express')();
-var http = require('http').Server(app);
+var http = require('http');
+var server = http.createServer(app);
 var io = require('socket.io')(http);
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
