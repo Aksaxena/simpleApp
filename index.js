@@ -1,6 +1,7 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var mysql = require('mysql');
 var port = process.env.PORT || 3000;
 
 app.get('/', function(req, res){
