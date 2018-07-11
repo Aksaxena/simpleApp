@@ -2,7 +2,11 @@ const app = require('express')()
 const server = require('http').createServer(app);
 const port = 3000;
 
-server.listen(port,  () => console.log(`Server is listening on ${port}`));
+
+server.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
+//server.listen(port,  () => console.log(`Server is listening on ${port}`));
 io = require('socket.io')()
 io.listen(server)
 
