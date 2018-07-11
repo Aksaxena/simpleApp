@@ -2,6 +2,20 @@
 <html>
   <head>
     <title>Socket.IO chat</title>
+	    <link href="http://vefinder.puzzlecoder.com/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="http://vefinder.puzzlecoder.com/assets/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="http://vefinder.puzzlecoder.com/assets/css/vefinder.fonts.css" rel="stylesheet" />
+    <link href="http://vefinder.puzzlecoder.com/assets/css/vefinder.gapping.css" rel="stylesheet" />
+    <link href="http://vefinder.puzzlecoder.com/assets/css/vefinder.style.css" rel="stylesheet" />
+    <link href="http://vefinder.puzzlecoder.com/assets/blog/css/font-awesome-4.5.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+	<link href="http://vefinder.puzzlecoder.com/assets/css/vefinder.external.css" rel="stylesheet" />
+	<link href="http://vefinder.puzzlecoder.com/assets/tagcomment/jquery.mentionable.css" rel="stylesheet" />
+	<link href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link href="http://vefinder.puzzlecoder.com/assets/css/typography.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/chat.css" rel="stylesheet" />
+	<link href="assets/css/developer-style.css" rel="stylesheet" />
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+	<link href="assets/css/chat.css" rel="stylesheet" />
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { font: 13px Helvetica, Arial; }
@@ -15,25 +29,304 @@
     </style>
   </head>
   <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
+<div class="container">
+        <div class="prod_detail chat_popup">
+        <!-- Modal -->
+            <div>
+                <div >
+                    <div >
+                        <div class="chat_popupbody">
+                         	<div class="chat_popupmbox">
+                         		<div id="content" class="chat-screen" style="padding-bottom: 50px;">
+								    <div class="row">
+								        <section class="col-sm-3 threads-section" style="height: 570px; padding: 0px !important;">
+								        	<div class="chat_tab_shadow">
+											    <div class="top_imgName"><em class="ImgHlderUser"><img src="img/@rishabh.jpg" alt="Img-Not-Found"title="Rishabh Malhotra"></em><span class="nameUseri">@Rishabh Mehrotra</span><span class="settingHlder"><img src="img/SettingIcon.png" alt="Img-Not-Found" title="Settings"></span></div>
+									            <div class="tab">
+												<div class="tab-links">
+													<span class="active">
+														<a data-toggle="tab" href="#chatTab">
+															<button class="tablinks chatTab">
+																<span class="chat_popup_chaticon"> 
+																	<img class="NoActive" src="img/No-Active.png" alt="chat" title="Chat">
+																	<img class="ActiveImg" src="img/chat-speech.png" alt="chat" title="Chat">
+
+																</span>
+																<span class="chat_popup_followicon">  
+																Chat
+																</span>
+															</button> 
+														</a>
+													</span>
+													<span>
+														<a data-toggle="tab" href="#forumTab">
+															<button class="tablinks forumTab" onclick="openChatPage()" href="forum_tab">
+																<span class="chat_popup_chaticon"> 
+																	<img class="ActiveImg" src="img/ActiveForm.png" alt="chat" title="Forum">
+																	<img class="NoActive" src="img/forumIcon.png" alt="chat" title="Forum">
+
+																</span>
+																<span class="chat_popup_followicon">  
+																Forum
+																</span>
+
+															</button>
+														</a>
+													</span>
+												</div>
+												</div>
+												
+												
+									            <div class="search-thread-section">  
+												    <span class="SearIcnHdr"><img src="img/searchIconChat.png" alt=""></span>
+									                <input type="text" id="box" value="" class="topics-search" placeholder="search"><br>
+									                <!-- <i class="material-icons">search</i> -->
+									            </div><!---
+									            <div  id="cus_scrollbar" class="chat_mlist_box">
+									            	 <div class="chat-threads-section">
+									                    <a href="http://vefinder.puzzlecoder.com/Chat/OTk4/Mg==">
+									                        <div class="active chat_dp_box">
+								                            	<div class="profile-dp-chat">
+								                                <img src="http://vefinder.puzzlecoder.com/assets/UserImage/2/2_1494872330.jpg" title="@angrybird">
+								                               </div>
+						                                        <p class="profile-name-chat">angrybird</p>
+						                                         <span class="chat_ppdate"><i class="fa fa-clock-o" aria-hidden="true"></i> 1d ago</span>
+						                                        <p class="last-message last_message_2">quickly copy and paste... </p>
+									                        </div>
+									                    </a>
+									                    <a href="http://vefinder.puzzlecoder.com/Chat/OTk4/Mg==">
+									                        <div class="chat_dp_box">
+								                            	<div class="profile-dp-chat">
+								                                <img src="http://vefinder.puzzlecoder.com/assets/UserImage/2/2_1494872330.jpg" title="@angrybird">
+								                               </div>
+						                                        <p class="profile-name-chat">angrybird</p>
+						                                         <span class="chat_ppdate" ><i class="fa fa-clock-o" aria-hidden="true"></i> 1d ago</span>
+						                                        <p class="last-message last_message_2">quickly copy and paste... </p>
+									                        </div>
+									                    </a>
+									            	</div>
+									            </div>
+											--->
+											</div>
+
+								             <div  id="cus_scrollbar" class="chat_mlist_box2">
+								            	<div class="chat-threads-section">
+								                    <a href="http://vefinder.puzzlecoder.com/Chat/OTk4/Mg==">
+								                        <div class=" chat_dp_box ActiveShadow">
+							                            	<div class="profile-dp-chat">
+							                                <img src="img/userRishbh.jpg" title="@Rishabh Mehrotra">
+							                               </div>
+					                                        <p class="profile-name-chat">Rachel</p>
+					                                         <span class="chat_ppdate"><i class="fa fa-clock-o" aria-hidden="true"></i> <em>12 min ago</em></span> 
+					                                        <p class="last-message last_message_2"> and i will be providing more wire... </p>
+								                        </div>
+								                    </a>
+								                    <a href="http://vefinder.puzzlecoder.com/Chat/OTk4/Mg==">
+								                        <div class=" active chat_dp_box">
+							                            	<div class="profile-dp-chat">
+							                                 <img src="img/userRishbh2.jpg" title="@Rishabh Mehrotra">
+							                               </div>
+					                                        <p class="profile-name-chat">Chloe <span class="NotificationAlert">5</span> </p>
+					                                          <span class="chat_ppdate"><i class="fa fa-clock-o" aria-hidden="true"></i> <em>12 min ago</em></span> 
+					                                         
+					                                        <p class="last-message last_message_2">and i will be providing more wire...</p>
+								                        </div>
+								                    </a>
+													
+								                    <a href="http://vefinder.puzzlecoder.com/Chat/OTk4/Mg==">
+								                        <div class=" active chat_dp_box">
+							                            	<div class="profile-dp-chat">
+							                                 <img src="img/userRishbh3.jpg" title="@Rishabh Mehrotra">
+							                               </div>
+					                                        <p class="profile-name-chat">Chloe <span class="NotificationAlert">5</span></p>
+					                                          <span class="chat_ppdate"><i class="fa fa-clock-o" aria-hidden="true"></i> <em>12 min ago</em></span> 
+					                                         
+					                                        <p class="last-message last_message_2">and i will be providing more wire...</p>
+								                        </div>
+								                    </a>
+
+								                    <a href="http://vefinder.puzzlecoder.com/Chat/OTk4/Mg==">
+								                        <div class=" active chat_dp_box">
+							                            	<div class="profile-dp-chat">
+							                                 <img src="img/userRishbh4.jpg" title="@Rishabh Mehrotra">
+							                               </div>
+					                                        <p class="profile-name-chat">Chloe</p>
+					                                          <span class="chat_ppdate"><i class="fa fa-clock-o" aria-hidden="true"></i> <em>12 min ago</em></span>  
+					                                        <p class="last-message last_message_2">and i will be providing more wire...</p>
+								                        </div>
+								                    </a>													
+								            	</div> 
+								        </section>
+								       
+								        <section class="col-sm-9 live-chat-section" style="height:570px;">
+								            <div class="chat-live-tab tab-content">
+								                <div id="cus_scrollbar" class="chat-screen-section live-chat">
+													<div id="chatTab" class="TabChatSngl tab-pane fade in active">
+														<div class="row incoming active">
+															<div class="col-lg-2 chating_imgbox">
+																<div class="incoming-dp chating_img">
+																	<img src="img/userRishbh.jpg" title="@Rishabh Mehrotra">
+																</div>
+															</div>
+															<div class="col-lg-10">
+																<div class="incoming-msg message-section"><p class="message">Hey Rishabh yes its going on good <span class="msg-timestamp">12:47</span></p>
+																</div>
+																
+																<div class="incoming-msg message-section"><p class="message"> We can go with this <span class="msg-timestamp">12:48</span></p>
+																</div>															
+															</div>
+														</div>
+														<div class=" active row outgoing">
+															<div class="col-lg-12">
+																<div class="outgoing-msg message-section">	<p class="message">  fine thank you and to love me <span class="msg-timestamp SendMsgi">12:48</span><span class="massege_img"> <img src="img/userRishbh.jpg" title="@Rishabh Mehrotra"></span></p>
+																	
+																</div>
+																
+																<div class="outgoing-msg message-section">	<p class="message">  Cool<span class="msg-timestamp SendMsgi">12:48</span> <span class="massege_img"> <img src="img/userRishbh.jpg" title="@Rishabh Mehrotra"></span></p>
+																	
+																</div> 
+															</div> 
+														</div>
+
+													</div>
+								               
+											        <div id="forumTab" class="ForumTab tab-pane fade">
+														<div class="row incoming active">
+															<div class="col-lg-2 chating_imgbox">
+																<div class="incoming-dp chating_img">
+																	<img src="img/defoult_user_pro.jpg" title="@Rishabh Mehrotra">
+																</div>
+															</div>
+															<div class="col-lg-10">
+																<div class="incoming-msg message-section"><p class="message">Hey Rishabh yes its going on good <span class="msg-timestamp">12:47</span></p>
+																</div>
+																
+																<div class="incoming-msg message-section"><p class="message"> We can go with this <span class="msg-timestamp">12:48</span></p>
+																</div>															
+															</div>
+														</div>
+														<div class=" active row outgoing">
+															<div class="col-lg-12">
+																<div class="outgoing-msg message-section">	<p class="message">  fine thank you and to love me <span class="msg-timestamp SendMsgi">12:48</span><span class="massege_img"> <img src="img/defoult_user_pro.jpg" title="@Rishabh Mehrotra"></span></p>
+																	
+																</div>
+																
+																<div class="outgoing-msg message-section">	<p class="message">  Cool<span class="msg-timestamp SendMsgi">12:48</span> <span class="massege_img"> <img src="img/defoult_user_pro.jpg" title="@Rishabh Mehrotra"></span></p>
+																	
+																</div> 
+															</div> 
+														</div>
+														<!-- PROFILE AREA START HERE -->
+														<div class="ProfileBoxright">
+															<span class="Cut_icon"><img src="img/cut_icon.png" alt="No-Icon" title="Close"></span>
+															 <span class="ProfileImfSpan"><img src="img/defoult_user_pro.jpg" title="@Rishabh Mehrotra"></span>
+															 <span class="FullNameUser">@Rishabh Mehrotra</span>
+															 <ul>
+																<li><i style="margin-left:4px;" class="fa fa-map-marker" aria-hidden="true"></i> <span>Delhi, India</span></li> 
+																<li><i class="fa fa-heart" aria-hidden="true"></i><span>Single</span></li> 
+																<li><i class="fa fa-mars-double" aria-hidden="true"></i> <span>Male</span></li> 
+																<li><i class="fa fa-birthday-cake" aria-hidden="true"></i><span>25 years old</span></li> 
+																<li><i class="fa fa-globe" aria-hidden="true"></i><span>www.intellirisecorp.com</span></li> 
+															 </ul>
+														</div>	
+                                                        <!-- PROFILE AREA END HERE --> 													
+													</div>
+											    </div>
+
+								                <div class="chat-type-section row">
+							                        
+													<div class="mainTypinGboxHlr">
+														<div class="TypinGboxHlr">
+															<div class="incoming-dp chating_img imgTyper">
+																<img src="img/userRishbh.jpg" title="@Rishabh Mehrotra">
+															</div>
+															<label class="typing_text" >
+																<img src="http://vefinder.puzzlecoder.com/assets/images/Loader-typing.gif" alt="">
+															</label>
+														</div>
+													</div>
+													<div class="chat_typebox">
+														<div class="chat_paperclip">
+															<input type="file" id="attachment" name="userfile">
+															<i class="fa fa-paperclip" aria-hidden="true"></i>		           
+														</div>
+
+														<input type="hidden" id="message_type" value="1">
+														<textarea type="text" name="your-message" class="type-message-input" id="data" aria-required="true" aria-invalid="false" placeholder="Start typing"></textarea>
+
+														<div class="chat_paper_plane">
+															<a href="#" class="send-msg">
+															   <i class="send-btn datasend fa fa-paper-plane" aria-hidden="true"></i>
+															</a>
+													   
+														</div>
+													</div>
+													<div class="chat_smilybox">
+														<a href="#" class="send-smiley">
+															<i class="smiley-btn fa fa-smile-o" aria-hidden="true"></i>
+														</a>
+													</div>
+								                </div>
+								            </div> 
+										</section>
+								   </div>
+								</div>
+								<div class="chat_footer_design">
+									<i class="fa fa-sort-down" aria-hidden="true"></i>
+								</div>
+                         		<!-- end -->
+                         	</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+<!-- chat popup end page -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       $(function () {
-        var socket = io();
-        $('form').submit(function(){
+         var socket = io.connect('http://localhost:3000/', {reconnection: true, reconnectionDelay: 1000, reconnectionDelayMax: 5000, reconnectionAttempts: 99999});
+		 $(".datasend").click(function(){
+			  socket.emit('chat message', $('#data').val());
+			  $('#data').val('');
+			  return false;
+		 });
+        /*$('form').submit(function(){
           socket.emit('chat message', $('#m').val());
           $('#m').val('');
           return false;
-        });
+        });*/
         socket.on('chat message', function(msg){
-          $('#messages').append($('<li>').text(msg));
+          $('.live-chat-section').append($('<li>').text(msg));
           window.scrollTo(0, document.body.scrollHeight);
         });
       });
     </script>
+	
+	<script type="text/javascript">
+    $(".pfull_cartdown").click(function(){
+	    $(".more_vf_item_tags_fill").slideToggle();
+	    $(".pfull_cartdown .fa").toggleClass("rotate");
+	});
+</script>
+
+        <script>
+  
+              $(".tab-links span a").click(function() {
+                $(".tab-links span").removeClass("active");
+                $(this).parent().addClass("active");
+            });
+  
+        </script> 
+	<script>
+		$(document).ready(function(){
+		$(".ProfileBoxright").show();
+			$(".Cut_icon").click(function(){
+				$(".ProfileBoxright").hide();
+			}); 
+		});
   </body>
 </html>

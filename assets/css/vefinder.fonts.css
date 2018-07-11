@@ -1,0 +1,44 @@
+﻿@font-face {
+    font-family: vf-ProximaNovaSoft-Regular;
+    src: url(../fonts/ProximaNovaSoft-Regular.otf);
+}
+
+@font-face {
+    font-family: vf-ProximaNovaSoft-Semibold;
+    src: url(../fonts/ProximaNovaSoft-Semibold.otf);
+}
+
+@font-face {
+    font-family: vf-AlegreyaSansSC-Light;
+    src: url(../fonts/AlegreyaSansSC-Light.otf);
+}
+
+@font-face {
+    font-family: vf-AlegreyaSansSC-Regular;
+    src: url(../fonts/AlegreyaSansSC-Regular.otf);
+}
+
+@font-face {
+    font-family: vf-AlegreyaSansSC-Medium;
+    src: url(../fonts/AlegreyaSansSC-Medium.otf);
+}
+
+@font-face {
+    font-family: vf-AlegreyaSansSC-MediumItalic;
+    src: url(../fonts/AlegreyaSansSC-MediumItalic.otf);
+}
+
+@font-face {
+    font-family: vf-AlegreyaSansSC-Bold;
+    src: url(../fonts/AlegreyaSansSC-Bold.otf);
+}
+
+@font-face {
+    font-family: vf-Lato-Regular;
+    src: url(../fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: vf-Lato-Bold;
+    src: url(../fonts/Lato-Bold.ttf);
+}
